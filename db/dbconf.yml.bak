@@ -1,0 +1,11 @@
+development:
+    driver: mysql
+    open: user=root dbname=gabula_test sslmode=disable
+
+test:
+    driver: mysql
+    open: user=root dbname=gabula_dev sslmode=disable
+
+production:
+    driver: mysql
+    open: user=root dbname=gabula_prod sslmode=verify-full

@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+set -eu
+set -o pipefail
+
+if [ -f .env ];then
+  set -o allexport
+  eval "$(cat .env | grep -v '^#')"
+  set +o allexport
+fi
+
+MIGRATE=$GOPATH/bin/migrate
+[ -x $GOPATH/bin/migrate ] && MIGRATE=$GOPATH/bin/migrate
+
+$MIGRATE \
+  -url "$APP_DATABASE_URL" \
+  -path ./data/migrations \
+  "$@"

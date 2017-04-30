@@ -1,0 +1,6 @@
+package: .
+import:
+- package: github.com/jinzhu/gorm
+- package: github.com/dgrijalva/jwt-go
+- package: github.com/jinzhu/inflection
+- package: github.com/gin-gonic/gin

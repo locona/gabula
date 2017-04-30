@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+set -eu
+
+echo "---------------- Start package install ------------------"
+
+if [ -d `which migrate` ]; then
+  echo "Install package"
+  go get -u github.com/mattes/migrate
+else
+  echo "Already Installed"
+fi
+
+echo "---------------- End package install ------------------"
