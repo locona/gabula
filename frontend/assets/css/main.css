@@ -25,11 +25,40 @@ body {
   margin-right: 4rem;
 }
 
+/* sidebar */
+ul.side-nav .userView {
+  padding: 0;
+  padding-top: 3rem;
+  text-align: center;
+}
+
+.userView span {
+  font-size: 1.6rem;
+  text-align: center;
+}
+.logo {
+  width: 10rem;
+}
+.blue-text {
+  color: #40c4ff;
+}
+
 
 /*** main ***/
 main {
   min-height: 58rem;
-  width: 100%;
-  display: flex;
+  padding-left: 240px;
 }
 
+main .container {
+  margin: 0 auto;
+  width: 98%;
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 993px) {
+  main {
+    padding-left: 0px;
+
+  }
+}
